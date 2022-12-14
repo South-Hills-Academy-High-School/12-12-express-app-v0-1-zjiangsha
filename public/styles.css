@@ -20,11 +20,17 @@ h1 {
   max-width: 640px;
 }
 
-.container {
-  padding: 16px;
-  border: 4px solid white;
-  border-radius: 8px;
-  box-sizing: border-box;
+.container{
+  min-height: 50px;
+  padding-top: 20px;
+  text-align: center;
+  background-image: url('https://i.gifer.com/C4d7.gif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  clip-path: circle(30px);
+color: transparent;
+
 }
 
 .circle {
