@@ -41,10 +41,58 @@ color: transparent;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  clip-path: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Scandinavian_Snowflake.svg');
+  clip-path: url(#snowLarge);
 color: transparent;
 
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #8f7a66;
+  transform-origin: top-left;
+}
+
+.display-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.el {
+  width: 100vw;
+  height: 100vh;
+  padding: 1pt;
+
+  background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-mask-image: url(snowfield.svg);
+  mask-image: url(snowfield.svg);
+  -webkit-mask-size: 10%;
+  mask-size: 10%;
+  mask-repeat: repeat;
+  mask-position: 50%;
+  background-attachment: fixed;
+
+  -webkit-animation: mask-play 120s forwards;
+  animation: mask-play 120s forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes mask-play {
+  from {
+    -webkit-mask-position: 50% 0;
+    mask-position: 50% 0;
+  }
+  to {
+    -webkit-mask-position: 50% 1000%;
+    mask-position: 50% 1000%;
+  }
+}
+
 
 .circle {
   height: 100px;
